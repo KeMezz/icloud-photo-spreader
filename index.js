@@ -34,6 +34,9 @@ function processFolders(folders) {
 }
 
 function processFiles(files, dirName) {
+  if (dirName === "combined") {
+    return;
+  }
   files.forEach((file) => {
     move(dirName, file, combinedDir);
   });
